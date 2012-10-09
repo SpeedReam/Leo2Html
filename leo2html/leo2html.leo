@@ -11,12 +11,11 @@
 <find_panel_settings/>
 <vnodes>
 <v t="DSR.20121008174459.1279"><vh>top</vh></v>
-<v t="DSR.20121008174459.1281" a="E"><vh>@ignore</vh>
-<v t="DSR.20121008174459.1253"><vh> py_src\leo2html.py</vh>
+<v t="DSR.20121008174459.1253" a="E"><vh> @shadow py_src\leo2html.py</vh>
 <v t="DSR.20121008174459.1276"><vh>top</vh></v>
 <v t="DSR.20121008174459.1278"><vh>imports</vh></v>
 <v t="DSR.20121008174459.1254"><vh>globals</vh></v>
-<v t="DSR.20121008174459.1255"><vh>class ReadLeo</vh>
+<v t="DSR.20121008174459.1255" a="E"><vh>class ReadLeo</vh>
 <v t="DSR.20121008174459.1256"><vh>do_tag</vh></v>
 <v t="DSR.20121008174459.1257" a="E"><vh>class htag</vh>
 <v t="DSR.20121008174459.1258"><vh>write_open</vh></v>
@@ -39,6 +38,13 @@
 <v t="DSR.20121008174459.1274"><vh>__del__</vh></v>
 <v t="DSR.20121008174459.1275"><vh>__init__</vh></v>
 </v>
+</v>
+<v t="DSR.20121008174459.1283"><vh>support files</vh>
+<v t="DSR.20121008174459.1285" a="E"><vh>python files</vh>
+<v t="DSR.20121008174459.1287" a="E"><vh>@shadow make_hello1.py</vh></v>
+</v>
+<v t="DSR.20121008174459.1284" a="E"><vh>batch files</vh>
+<v t="DSR.20121008174459.1282"><vh>@asis make_hello1.bat</vh></v>
 </v>
 </v>
 </vnodes>
@@ -195,8 +201,7 @@ TAB = INDENT = "  "
             self.close = "&lt;/%s&gt;" % self.text
         else:
             self.tag = "&lt;%s /&gt;" % self.text
-    # handle any tag attributes. These must be the first immediate
-    # children of the tag, and must start with '+'
+    # handle any tag attributes.
     self.set_attribs()
 
 </t>
@@ -428,7 +433,7 @@ TAB = INDENT = "  "
 
 </t>
 <t tx="DSR.20121008174459.1274">def __del__(self):
-    o("flexure.__del__()")
+    o("leo2html.ReadLeo.__del__()")
     if self.tfile:
         self.tfile.seek(0)
         data = self.tfile.read()
@@ -476,7 +481,35 @@ Copyright David Speed Ream 2012, all rights reserved.
 </t>
 <t tx="DSR.20121008174459.1278">from qobj import QBase
 </t>
-<t tx="DSR.20121008174459.1279"></t>
-<t tx="DSR.20121008174459.1281"></t>
+<t tx="DSR.20121008174459.1279">'''
+Parse a LEO File into an HTML file.
+
+Ver. 0.0.2, originated October 8, 2012
+Ver. 0.0.1, originated September 12, 2012
+@author: David Speed Ream
+Copyright David Speed Ream 2012, all rights reserved.
+'''
+</t>
+<t tx="DSR.20121008174459.1282">@rem
+@rem Execute this batch file to run the python script make_hello1.py.
+@rem make_hello1.py turns .\leo_source\hello1.leo into .\html\hello1.html
+@rem
+@rem NOTE!!
+@rem Change __python__ to point to your python installation
+@rem
+@rem
+@set __python__=C:\Python273Build2010\Python-2.7.3\PCbuild\python.exe
+@rem
+@rem
+                   "%__python__%" make_hello1.py
+@rem
+@rem
+@set __python__=
+</t>
+<t tx="DSR.20121008174459.1283"></t>
+<t tx="DSR.20121008174459.1284">@language plain
+</t>
+<t tx="DSR.20121008174459.1285">@language python
+</t>
 </tnodes>
 </leo_file>
