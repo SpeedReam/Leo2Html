@@ -7,7 +7,8 @@ Run this python script to process .\leo_source\hello1.leo into
 if __name__ == "__main__":
     #@    @+others
     #@+node:DSR.20121008174459.1289:globals
-    DEBUG = 1
+    DEBUG = 1 # make this 1 to trace routine's progress (debugging)
+    INDENT = 2
     X = None
     isOK = False
     CWD = ""
@@ -25,13 +26,15 @@ if __name__ == "__main__":
     if DEBUG:print("\n\nStarting make_hello.py\n\n")
     #@-node:DSR.20121008174459.1293:start
     #@+node:DSR.20121008174459.1291:setup
-    if DEBUG: # make this 1 to trace routine's progress (debugging)
+    if DEBUG:
         def o(data):print data
     else:
         def o(data):pass
     #@-node:DSR.20121008174459.1291:setup
     #@+node:DSR.20121008174459.1292:run
-    X = ReadLeo(out=o)
+    print "1"
+    X = ReadLeo(INDENT, out=o)
+    print "2"
     if X:
         filename = join(CWD, 'leo_source', "hello1.leo")
         isOK = X.open(filename)

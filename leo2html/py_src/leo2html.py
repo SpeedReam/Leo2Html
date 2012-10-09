@@ -8,7 +8,7 @@ Copyright David Speed Ream 2012, all rights reserved.
 '''
 from qobj import QBase
 c = g = None
-TAB = INDENT = "  "
+harry = 10
 class ReadLeo(QBase):
     def do_tag(self, position):
         '''
@@ -27,13 +27,14 @@ class ReadLeo(QBase):
             o("Cannot get headline text from postion: %s" % str(position))
             return False
         # compute tag elements
-        indent = self.indent * self.indent_char
+        #indent = self.indent * self.indent_char
+        indent = self.indent_pos * self.indent_size * ' '
         newtag = self.htag(headline, position, indent, self.tfile)
         # write tag
         if not newtag.write_open():return False
-        self.indent += 1
+        self.indent_pos += 1
         if not self.do_next_tree(position):return False
-        self.indent -=1
+        self.indent_pos -=1
         if not newtag.write_close():return False
         return True
 
@@ -146,8 +147,7 @@ class ReadLeo(QBase):
                     self.close = "</%s>" % self.text
                 else:
                     self.tag = "<%s />" % self.text
-            # handle any tag attributes. These must be the first immediate
-            # children of the tag, and must start with '+'
+            # handle any tag attributes.
             self.set_attribs()
 
     def do_tree(self, position):
@@ -193,25 +193,6 @@ class ReadLeo(QBase):
                 if not self.do_tree(item):return False
                 return True
         return False
-
-    def process(self, outname):
-        '''
-        flexure.open must have been called prior to calling this routine.
-        outname is the full path of the file to be output (the html page).
-        All output goes to a temporary file. If no errors are encountered,
-        the temporary file is copied to the output file (outname).
-        Returns True on success, otherwise False.
-        '''
-        t()
-        # save output file name
-        self.outname = outname
-        # get the temporary output file
-        if not self.get_tempfile():return False
-        # process the doctype, if there is one
-        if not self.doctype():return False
-        # process the html tag. It is an error if there is no tag
-        if not self.html():return False
-        return True
 
     def do_next_tree(self, position):
         '''
@@ -366,21 +347,7 @@ class ReadLeo(QBase):
             o("\nError: Cannot create a temporary file.\n")
             return False
 
-    def __del__(self):
-        o("flexure.__del__()")
-        if self.tfile:
-            self.tfile.seek(0)
-            data = self.tfile.read()
-            o(data)
-            self.tfile.close()
-            self.tfile = None
-        if self.outname:
-            outf = open(self.outname, 'wb')
-            outf.write(data)
-            outf.close()
-            self.outname = None
-
-    def __init__(self, out=None, ar=None):
+    def __init__(self, indent_size, out=None, ar=None):
         # standard setup for QBase
         QBase.__init__(self, out=out, ar=ar)
         global t,o;t=self.t;o=self.o;
@@ -389,11 +356,14 @@ class ReadLeo(QBase):
         global c, g
         c = g = None
         # Set instance variables to default values
+        self.indent_pos = 0 # indent position
+        self.indent_size = indent_size
         self.leofile = None # name of leo input file
         self.first_children = None
         self.outname = None # name of output html file
         self.tfile = None # temporary output file object
         # The following should be settable somehow.
+        """
         global TAB, INDENT
         self.indent_size = 2
         self.indent_char = " "
@@ -402,3 +372,48 @@ class ReadLeo(QBase):
         self.tab_size = 2
         self.tab_char = " "
         self.tab = TAB = "  "
+        """
+    def write_file(self):
+        t()
+        try:
+            if self.tfile:
+                self.tfile.seek(0)
+                data = self.tfile.read()
+                o(data)
+                self.tfile.close()
+                self.tfile = None
+            else:
+                return False
+            if self.outname:
+                outf = open(self.outname, 'wb')
+                outf.write(data)
+                outf.close()
+                self.outname = None
+                return True
+            return False
+        except:
+            o("Cannot write to final html destination file.")
+            return False
+
+
+        
+    def process(self, outname):
+        '''
+        ReadLeo.open must have been called prior to calling this routine.
+        outname is the full path of the file to be output (the html page).
+        All output goes to a temporary file. If no errors are encountered,
+        the temporary file is copied to the output file (outname).
+        Returns True on success, otherwise False.
+        '''
+        t()
+        # save output file name
+        self.outname = outname
+        # get the temporary output file
+        if not self.get_tempfile():return False
+        # process the doctype, if there is one
+        if not self.doctype():return False
+        # process the html tag. It is an error if there is no tag
+        if not self.html():return False
+        if not self.write_file():return False
+        return True
+

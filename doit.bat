@@ -5,7 +5,7 @@ call git status
 pause
 call git add . --dry-run
 pause
-call git commit -m "More Leo and batch files copied over. Minor enhancements to code."
+call git commit -m "Cleaned-up indentation mess."
 goto DONE
 :LOG
 git log --reverse
