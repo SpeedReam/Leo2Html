@@ -74,7 +74,8 @@ class ReadLeo(QBase):
         def write_open(self):
             # see if any body content, meaning attributes
             if len(self.attribs):
-                self.tag = "<%s" % self.text
+                #self.tag = "<%s" % self.text
+                self.tag = "<%s" % self.tag_text
                 self.ofile.write("\n" + self.indent + self.tag)
                 for item in self.attribs:
                     if len(item):
@@ -102,10 +103,10 @@ class ReadLeo(QBase):
                 self.ofile.write(" " + self.close)
                 return True
             # handle regular tags
-            itext = self.text.split(" ")[0]
-            self.close = "</%s>" % itext
+            #itext = self.text.split(" ")[0]
+            self.close = "</%s>" % self.tag_text
             for atag, atype in self.tags:
-                if atag == itext:
+                if atag == self.tag_text:
                     if atype == "newline":
                         self.ofile.write("\n" + self.indent + self.close)
                         return True
@@ -116,7 +117,8 @@ class ReadLeo(QBase):
         #@+node:DSR.20121008174459.1260:__init__
         def __init__(self, text, position, indent, ofile, comments=True):
             # setup argument data
-            self.text = text
+            self.text = text # text of the entire headline
+            self.tag_text = text.split(" ")[0] # first word of headline
             self.position = position
             self.indent = indent # current indent characters
             self.ofile = ofile # open output file object
@@ -134,9 +136,8 @@ class ReadLeo(QBase):
         #@+node:DSR.20121008174459.1261:set_attribs
         def set_attribs(self):
             '''
-            Given a position whose headline is a tag, check the immediate
-            children of the node to see if any start with '+'. If so, these are
-            the tag's attributes.
+            Given a headline, see if there is body text. If so, the body text is the
+            tag's attributes.
             '''
             body_text = self.position.b
             if len(body_text):
@@ -156,7 +157,7 @@ class ReadLeo(QBase):
                 return
             # handle any special case tags
             for atag, ttype in self.tags:
-                if atag == self.text:
+                if atag == self.tag_text:
                     if ttype == "empty":
                         self.tag = "<%s />" % self.text
                         self.empty = True
@@ -241,48 +242,6 @@ class ReadLeo(QBase):
         return True
 
     #@-node:DSR.20121008174459.1266:do_next_tree
-    #@+node:DSR.20121008174459.1267:handle_special
-    def handle_special(self, position):
-        '''
-        This routine handles special nodes of a Leo html source file. The
-        special nodes are:
-        1. content
-           content gets output without further processing. In other words,
-           just output the body text to the html file.
-        2. doctype
-           ignore any doctype (a doctype at the top of a Leo file has
-           already been processed.)
-        3. - elements
-           nodes starting with '-' are comments.
-           These are ignored.
-        4. obselete
-           nodes starting with this are ignored
-        Returns:
-            True if the position has been processed
-            False if the position was not processed
-            -1 if there was an error
-        '''
-        t()
-        headline = position.h.lower()
-        if headline == "doctype":
-            return True
-        if headline == "content":
-            if not self.write(position.b, NL=False):return -1
-            return True
-        if headline == "+content":
-            body_text = position.b
-            if len(body_text):
-                lines = body_text.split("\n")
-                for aline in lines:
-                    if not self.write(aline):return -1
-            return True
-        if headline == "obselete":
-            return True
-        if headline.startswith("-"):
-            return True
-        return False
-
-    #@-node:DSR.20121008174459.1267:handle_special
     #@+node:DSR.20121008174459.1268:make_children
     def make_children(self, position):
         '''
@@ -314,24 +273,6 @@ class ReadLeo(QBase):
         return True
 
     #@-node:DSR.20121008174459.1269:doctype
-    #@+node:DSR.20121008174459.1270:write
-    def write(self, data, NL=True):
-        '''
-        Write data to the current temporary file.
-        If NL, add a carriage return plus indent at the beginning of the
-        line.
-        '''
-        try:
-            if NL:
-                prelim = self.indent * self.indent_char
-                self.tfile.write("\n" + prelim)
-            self.tfile.write(data)
-            return True
-        except:
-            o("Error writing.\n")
-            return False
-
-    #@-node:DSR.20121008174459.1270:write
     #@+node:DSR.20121008174459.1271:get_first_children
     def get_first_children(self):
         '''
@@ -395,34 +336,6 @@ class ReadLeo(QBase):
             return False
 
     #@-node:DSR.20121008174459.1273:get_tempfile
-    #@+node:DSR.20121008174459.1275:__init__
-    def __init__(self, indent_size, out=None, ar=None):
-        # standard setup for QBase
-        QBase.__init__(self, out=out, ar=ar)
-        global t,o;t=self.t;o=self.o;
-        t()
-        # Zero out Leo globals
-        global c, g
-        c = g = None
-        # Set instance variables to default values
-        self.indent_pos = 0 # indent position
-        self.indent_size = indent_size
-        self.leofile = None # name of leo input file
-        self.first_children = None
-        self.outname = None # name of output html file
-        self.tfile = None # temporary output file object
-        # The following should be settable somehow.
-        """
-        global TAB, INDENT
-        self.indent_size = 2
-        self.indent_char = " "
-        INDENT = "  "
-        self.indent = 0
-        self.tab_size = 2
-        self.tab_char = " "
-        self.tab = TAB = "  "
-        """
-    #@-node:DSR.20121008174459.1275:__init__
     #@+node:DSR.20121009151355.1187:write_file
     def write_file(self):
         t()
@@ -471,6 +384,102 @@ class ReadLeo(QBase):
         return True
 
     #@-node:DSR.20121008174459.1265:process
+    #@+node:DSR.20121008174459.1275:__init__
+    def __init__(self, indent_size, out=None, ar=None):
+        # standard setup for QBase
+        QBase.__init__(self, out=out, ar=ar)
+        global t,o;t=self.t;o=self.o;
+        t()
+        # Zero out Leo globals
+        global c, g
+        c = g = None
+        # Set instance variables to default values
+        self.indent_pos = 0 # indent position
+        self.indent_size = indent_size
+        self.leofile = None # name of leo input file
+        self.first_children = None
+        self.outname = None # name of output html file
+        self.tfile = None # temporary output file object
+        # The following should be settable somehow.
+        """
+        global TAB, INDENT
+        self.indent_size = 2
+        self.indent_char = " "
+        INDENT = "  "
+        self.indent = 0
+        self.tab_size = 2
+        self.tab_char = " "
+        self.tab = TAB = "  "
+        """
+    #@-node:DSR.20121008174459.1275:__init__
+    #@+node:DSR.20121008174459.1270:write
+    def write(self, data, NL=True):
+        '''
+        Write data to the current temporary file.
+        If NL, add a carriage return plus indent at the beginning of the
+        line.
+        '''
+        try:
+            if NL:
+                prelim = self.indent_pos * self.indent_size * ' '
+                self.tfile.write("\n" + prelim)
+            self.tfile.write(data)
+            return True
+        except:
+            o("Error writing.\n")
+            return False
+
+    #@-node:DSR.20121008174459.1270:write
+    #@+node:DSR.20121008174459.1267:handle_special
+    def handle_special(self, position):
+        '''
+        This routine handles special nodes of a Leo html source file. The
+        special nodes are:
+        1. content
+           content gets output without further processing. In other words,
+           just output the body text to the html file.
+        2. +content
+           content gets inserted line by line with the current indent added
+           to the start of each line.
+        3. doctype
+           ignore any doctype (a doctype at the top of a Leo file has
+           already been processed.)
+        4. - elements
+           headlines starting with '-' are comments used in the leo file but
+           not to be used in the final html. These are ignored.
+        5. obselete
+           nodes starting with this are ignored
+        Returns:
+            True if the position has been processed
+            False if the position was not processed
+            -1 if there was an error
+        '''
+        t()
+        headline = position.h.lower()
+        if headline == "doctype":
+            return True
+        if headline == "content":
+            if not self.write(position.b, NL=False):return -1
+            return True
+        if headline == "+content":
+            body_text = position.b
+            if len(body_text):
+                lines = body_text.split("\n")
+                print "lines = %s" % str(lines)
+                for aline in lines:
+                    temp = str(aline)
+                    print "aline = %s" % temp
+                    #from pdb import set_trace as tr
+                    #tr()
+                    if not self.write(temp):return -1
+            return True
+        if headline == "obselete":
+            return True
+        if headline.startswith("-"):
+            return True
+        return False
+
+    #@-node:DSR.20121008174459.1267:handle_special
     #@-others
 #@-node:DSR.20121008174459.1255:class ReadLeo
 #@-others

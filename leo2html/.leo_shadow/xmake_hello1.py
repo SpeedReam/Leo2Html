@@ -23,7 +23,7 @@ if __name__ == "__main__":
     from leo2html import ReadLeo
     #@-node:DSR.20121008174459.1290:imports
     #@+node:DSR.20121008174459.1293:start
-    if DEBUG:print("\n\nStarting make_hello.py\n\n")
+    if DEBUG:print("\n\nStarting make_hello1.py\n\n")
     #@-node:DSR.20121008174459.1293:start
     #@+node:DSR.20121008174459.1291:setup
     if DEBUG:
@@ -32,9 +32,7 @@ if __name__ == "__main__":
         def o(data):pass
     #@-node:DSR.20121008174459.1291:setup
     #@+node:DSR.20121008174459.1292:run
-    print "1"
     X = ReadLeo(INDENT, out=o)
-    print "2"
     if X:
         filename = join(CWD, 'leo_source', "hello1.leo")
         isOK = X.open(filename)
@@ -46,7 +44,7 @@ if __name__ == "__main__":
         X = None
     #@-node:DSR.20121008174459.1292:run
     #@+node:DSR.20121008174459.1295:stop
-    if DEBUG:print("\n\nFinishing make_hello.py\n\n")
+    if DEBUG:print("\n\nFinishing make_hello1.py\n\n")
     #@-node:DSR.20121008174459.1295:stop
     #@-others
 #@-node:DSR.20121008174459.1287:@shadow make_hello1.py

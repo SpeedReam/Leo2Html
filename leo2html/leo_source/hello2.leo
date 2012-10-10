@@ -10,12 +10,15 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="DSR.20120905131510.1542"><vh>html</vh>
-<v t="DSR.20120905131510.1543"><vh>head</vh>
-<v t="DSR.20120908180528.1569"><vh>title</vh>
+<v t="DSR.20121009153136.1232"><vh>doctype</vh></v>
+<v t="DSR.20120905131510.1542" a="E"><vh>html</vh>
+<v t="DSR.20120905131510.1543" a="E"><vh>head</vh>
+<v t="DSR.20121009153136.1250"><vh>meta charset="utf-8"</vh></v>
+<v t="DSR.20120908180528.1569" a="E"><vh>title</vh>
 <v t="DSR.20120908180528.1570"><vh>content</vh></v>
 </v>
-<v t="DSR.20120911161629.2330"><vh>link</vh></v>
+<v t="DSR.20120911161629.2330"><vh>link rel="stylesheet" type="text/css" href="css/style.css"</vh></v>
+<v t="DSR.20121009153136.1252"><vh>link</vh></v>
 <v t="DSR.20120911161629.2332"><vh>link</vh></v>
 <v t="DSR.20120911161629.2343"><vh>script type="text/javascript" src="js/js.js"</vh></v>
 </v>
@@ -25,78 +28,11 @@
 <v t="DSR.20120911161629.2252" a="E"><vh>!page header</vh>
 <v t="DSR.20120911161629.2328" a="E"><vh>div style="margin:auto;max-width:960px;"</vh>
 <v t="DSR.20120911161629.1564" a="E"><vh>!page header - left company name</vh>
-<v t="DSR.20120911161629.1561"><vh>div class="co_name"</vh>
+<v t="DSR.20120911161629.1561" a="E"><vh>div class="co_name"</vh>
 <v t="DSR.20120911161629.2139" a="E"><vh>a href="index.html"</vh>
 <v t="DSR.20120911161629.1579"><vh>content</vh></v>
 </v>
 </v>
-</v>
-<v t="DSR.20120911161629.1574" a="E"><vh>!page header - right menu</vh>
-<v t="DSR.20120911161629.1570" a="E"><vh>div class="menu"</vh>
-<v t="DSR.20120911161629.1571" a="E"><vh>ul</vh>
-<v t="DSR.20120911161629.1575" a="E"><vh>li</vh>
-<v t="DSR.20120911161629.2140" a="E"><vh>a</vh>
-<v t="DSR.20120911161629.1576"><vh>content</vh></v>
-</v>
-</v>
-<v t="DSR.20120911161629.1618"><vh>li class="padding"</vh>
-<v t="DSR.20120911161629.1619"><vh>content</vh></v>
-</v>
-<v t="DSR.20120911161629.1614" a="E"><vh>li</vh>
-<v t="DSR.20120911161629.2141" a="E"><vh>a</vh>
-<v t="DSR.20120911161629.1615"><vh>content</vh></v>
-</v>
-</v>
-<v t="DSR.20120911161629.1610"><vh>li class="padding"</vh>
-<v t="DSR.20120911161629.1611"><vh>content</vh></v>
-</v>
-<v t="DSR.20120911161629.1606" a="E"><vh>li</vh>
-<v t="DSR.20120911161629.2142" a="E"><vh>a</vh>
-<v t="DSR.20120911161629.1607"><vh>content</vh></v>
-</v>
-</v>
-<v t="DSR.20120911161629.1586"><vh>li class="padding"</vh>
-<v t="DSR.20120911161629.1587"><vh>content</vh></v>
-</v>
-<v t="DSR.20120911161629.1590" a="E"><vh>li</vh>
-<v t="DSR.20120911161629.2143" a="E"><vh>a</vh>
-<v t="DSR.20120911161629.1591"><vh>content</vh></v>
-</v>
-</v>
-<v t="DSR.20120911161629.1594"><vh>li class="padding"</vh>
-<v t="DSR.20120911161629.1595"><vh>content</vh></v>
-</v>
-<v t="DSR.20120911161629.1598" a="E"><vh>li</vh>
-<v t="DSR.20120911161629.2144" a="E"><vh>a</vh>
-<v t="DSR.20120911161629.1599"><vh>content</vh></v>
-</v>
-</v>
-<v t="DSR.20120911161629.1602"><vh>li class="padding"</vh>
-<v t="DSR.20120911161629.1603"><vh>content</vh></v>
-</v>
-<v t="DSR.20120911161629.1582" a="E"><vh>li</vh>
-<v t="DSR.20120911161629.1583" a="E"><vh>a</vh>
-<v t="DSR.20120911161629.2138"><vh>content</vh></v>
-</v>
-</v>
-</v>
-</v>
-</v>
-</v>
-</v>
-<v t="DSR.20120911161629.2325"><vh>!opening image</vh>
-<v t="DSR.20120911161629.2326"><vh>div class="home_image"</vh>
-<v t="DSR.20120911161629.2341"><vh>div</vh>
-<v t="DSR.20120911161629.2342"><vh>content</vh></v>
-</v>
-<v t="DSR.20120911161629.2333" a="E"><vh>h1</vh>
-<v t="DSR.20120911161629.2334"><vh>content</vh></v>
-</v>
-<v t="DSR.20120911161629.2335" a="E"><vh>h2</vh>
-<v t="DSR.20120911161629.2336"><vh>content</vh></v>
-</v>
-<v t="DSR.20120911161629.2339" a="E"><vh>h3</vh>
-<v t="DSR.20120911161629.2340"><vh>content</vh></v>
 </v>
 </v>
 </v>
@@ -112,65 +48,22 @@ xmlns:fb="http://www.facebook.com/2008/fbml"
 <t tx="DSR.20120905131510.1543"></t>
 <t tx="DSR.20120905131510.1544"></t>
 <t tx="DSR.20120908180528.1569"></t>
-<t tx="DSR.20120908180528.1570">Flexure Engineering ~ Home</t>
+<t tx="DSR.20120908180528.1570">Hello Company ~ Home</t>
 <t tx="DSR.20120911161629.1561"></t>
 <t tx="DSR.20120911161629.1563"></t>
 <t tx="DSR.20120911161629.1564"></t>
 <t tx="DSR.20120911161629.1565"></t>
-<t tx="DSR.20120911161629.1570"></t>
-<t tx="DSR.20120911161629.1571"></t>
-<t tx="DSR.20120911161629.1574"></t>
-<t tx="DSR.20120911161629.1575">id="lcontact" class="navigation"  onMouseOver="do_menu(this, 'in');"
-onMouseOut="do_menu(this, 'out');"</t>
-<t tx="DSR.20120911161629.1576">CONTACT</t>
-<t tx="DSR.20120911161629.1579">FLEXURE ENGINEERING</t>
-<t tx="DSR.20120911161629.1582">id="lengineering" class="navigation"  onMouseOver="do_menu(this, 'in');"
-onMouseOut="do_menu(this, 'out');"</t>
-<t tx="DSR.20120911161629.1583">id="mengineering" href="engineering.html"</t>
-<t tx="DSR.20120911161629.1586"></t>
-<t tx="DSR.20120911161629.1587">&amp;nbsp;</t>
-<t tx="DSR.20120911161629.1590">id="levents" class="navigation"  onMouseOver="do_menu(this, 'in');"
-onMouseOut="do_menu(this, 'out');"</t>
-<t tx="DSR.20120911161629.1591">EVENTS</t>
-<t tx="DSR.20120911161629.1594"></t>
-<t tx="DSR.20120911161629.1595">&amp;nbsp;</t>
-<t tx="DSR.20120911161629.1598">id="lresearch" class="navigation"  onMouseOver="do_menu(this, 'in');"
-onMouseOut="do_menu(this, 'out');"</t>
-<t tx="DSR.20120911161629.1599">RESEARCH</t>
-<t tx="DSR.20120911161629.1602"></t>
-<t tx="DSR.20120911161629.1603">&amp;nbsp;</t>
-<t tx="DSR.20120911161629.1606">id="ltraining" class="navigation"  onMouseOver="do_menu(this, 'in');"
-onMouseOut="do_menu(this, 'out');"</t>
-<t tx="DSR.20120911161629.1607">TRAINING</t>
-<t tx="DSR.20120911161629.1610"></t>
-<t tx="DSR.20120911161629.1611">&amp;nbsp;</t>
-<t tx="DSR.20120911161629.1614">id="labout" class="navigation"  onMouseOver="do_menu(this, 'in');"
-onMouseOut="do_menu(this, 'out');"</t>
-<t tx="DSR.20120911161629.1615">ABOUT</t>
-<t tx="DSR.20120911161629.1618"></t>
-<t tx="DSR.20120911161629.1619">&amp;nbsp;</t>
-<t tx="DSR.20120911161629.2138">ENGINEERING</t>
+<t tx="DSR.20120911161629.1579">HELLO COMPANY</t>
 <t tx="DSR.20120911161629.2139"></t>
-<t tx="DSR.20120911161629.2140">id="mcontact" href="contact.html"</t>
-<t tx="DSR.20120911161629.2141">id="mabout" href="about.html"</t>
-<t tx="DSR.20120911161629.2142">id="mtraining" href="training.html"</t>
-<t tx="DSR.20120911161629.2143">id="mevents" href="events.html"</t>
-<t tx="DSR.20120911161629.2144">id="mresearch" href="research.html"
-</t>
 <t tx="DSR.20120911161629.2252"></t>
-<t tx="DSR.20120911161629.2325"></t>
-<t tx="DSR.20120911161629.2326"></t>
 <t tx="DSR.20120911161629.2328"></t>
-<t tx="DSR.20120911161629.2330">rel="stylesheet" type="text/css" href="css/style.css"</t>
-<t tx="DSR.20120911161629.2332">rel="stylesheet" type="text/css" href="css/home.css"</t>
-<t tx="DSR.20120911161629.2333"></t>
-<t tx="DSR.20120911161629.2334">EVERYTHING YOU NEED TO TEST YOUR ROBOT</t>
-<t tx="DSR.20120911161629.2335"></t>
-<t tx="DSR.20120911161629.2336">AT 20 KELVIN</t>
-<t tx="DSR.20120911161629.2339"></t>
-<t tx="DSR.20120911161629.2340">FROM INSIDE YOUR GARAGE!</t>
-<t tx="DSR.20120911161629.2341"></t>
-<t tx="DSR.20120911161629.2342">&amp;nbsp;</t>
+<t tx="DSR.20120911161629.2330"></t>
+<t tx="DSR.20120911161629.2332">rel="stylesheet"
+type="text/css"
+href="css/home.css"</t>
 <t tx="DSR.20120911161629.2343"></t>
+<t tx="DSR.20121009153136.1232">&lt;!doctype html&gt;</t>
+<t tx="DSR.20121009153136.1250"></t>
+<t tx="DSR.20121009153136.1252">rel="stylesheet" type="text/css" href="css/style1.css"</t>
 </tnodes>
 </leo_file>

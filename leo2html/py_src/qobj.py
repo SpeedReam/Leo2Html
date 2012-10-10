@@ -1,7 +1,7 @@
 '''
-Created on Jun 20, 2012
-
-@author: Speed
+Ver. 0.0.1, originated Jun 20, 2012
+@author: David Speed Ream
+Copyright David Speed Ream 2012, all rights reserved.
 '''
 
 from qtrace import Trace

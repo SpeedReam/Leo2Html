@@ -1,0 +1,147 @@
+<!doctype html>
+<!--567890123456782012345678301234567840123456785012345678601234567870123-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Leo2Html ~ Design Philosophy</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+  </head>
+<body>
+  <div class="content">
+    <h1>Leo2Html ~ Design Philosophy</h1>
+    <h2 class="left">What is Leo2Html?</h2>
+    <p>&nbsp;</p>
+    <p>Leo2Html consists of two parts.</p>
+    <p>&nbsp;</p>
+    <ul>
+      <li>Part 1: A Leo outline (source outline) written with a certain
+      syntax.</li>
+      <li>Part 2: A python module (leo2html.py) that reads the source
+      outline and generates an html file.</li>
+    </ul>
+    <h2 class="left">Why Use Leo2Html?</h2>
+    <p>&nbsp;</p>
+    <p>I use Leo2Html because I want several things:</p>
+    <ul>
+      <li>I want to write HTML from scratch using the HTML language
+        <ul>
+          <li>For many projects, I don't need or want an HTML editor (I have
+          several good ones to choose from.) I can write the code faster by
+          just writing it.</li>
+        </ul>
+      </li>
+      <li>I want my code to always match every open tag with a closing tag
+      (for those tags which have closing tags.)</li>
+      <li>I want my code to automatically indent in a sensible way when the
+      final code is generated in order to make it easier to read.</li>
+      <li>I want my code to automatically insert optional comments when tags
+      start and stop.</li>
+      <li>I want to write my code in Leo because of its outlining capability
+      and ease of scripting from outside python modules.</li>
+      <li>Almost all code I write (python, c++, assembly) is from within Leo
+      already, so using Leo to format HTML seems like a logical time-saving
+      solution.</li>
+      <li>The existing Leo-to-Html solutions don't provide the solution set
+      I was looking for.</li>
+    </ul>
+    <h2 class="left">What is the Syntax for the Source Outline?</h2>
+    <p>&nbsp;</p>
+    <p>The following discussion assumes the product is complete to the
+    original working specifications. At the time of this writing, the
+    product is _not_ complete, so it currently works not exactly as this
+    description suggests.</p>
+    <p>&nbsp;</p>
+    <p>The basic idea is that each Leo headline is either 1) an HTML tag or
+    2) a 'special' headline.</p>
+    <p>&nbsp;</p>
+    <p>Each Leo body pane is either 1) some in-line HTML content, or 2)
+    attributes for an HTML tag.</p>
+    <p>&nbsp;</p>
+    <p>The 'special' Leo headline 'content' is always copied straight to
+    the final HTML document with no processing.</p>
+    <p>&nbsp;</p>
+    <p>At the top level of the source outline, all headlines (except
+    'special' headlines) are ignored until a headline is encountered that
+    contains the single word 'html'. This 'html' outline starts the entire
+    HTML document, and the entire HTML document is contained in the children
+    of the 'html' node.</p>
+    <p>&nbsp;</p>
+    <p>An exception is the special headline 'Doctype' which, if it exists, is
+    copied directly to the top of the HTML output file as the doctype line.</p>
+    <h4>Example 1 (hello1.leo)</h4>
+    <p>&nbsp;</p>
+    <p>Final HTML file:</p>
+    <pre class="pretext">
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hello World document text.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+    Leo Source Outline (hello1.leo):
+    <div class="clearbth">&nbsp;</div>
+    <div class="fleft"><img class="thinborder" src="img/leo1.png"></div>
+    <div class="clearboth">&nbsp;</div>
+    <div class="fleft"><img class="thinborder" src="img/leo2.png"></div>
+    <div class="clearboth">&nbsp;</div>
+    <h4>Example 2</h4>
+    <p>Final HTML file:</p>
+    <pre class="pretext">
+&lt;!doctype html&gt;<br>&lt;html<br> xmlns:og=&quot;http://opengraphprotocol.org/schema/&quot;<br> xmlns:fb=&quot;http://www.facebook.com/2008/fbml&quot;&gt;<br>  &lt;head&gt;<br>    &lt;meta charset=&quot;utf-8&quot; /&gt;<br>    &lt;title&gt;Hello Company ~ Home&lt;/title&gt;<br>    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style.css&quot; /&gt;<br>    &lt;link<br>     rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/style1.css&quot; /&gt;<br>    &lt;link<br>     rel=&quot;stylesheet&quot;<br>     type=&quot;text/css&quot;<br>     href=&quot;css/home.css&quot; /&gt;<br>    &lt;script type=&quot;text/javascript&quot; src=&quot;js/js.js&quot;&gt;<br>    &lt;/script&gt;<br>  &lt;/head&gt;<br>  &lt;body onload=&quot;do_load();&quot;&gt;<br>    &lt;!-- page container div --&gt;<br>      &lt;div style=&quot;margin:auto;width:1031px;&quot;&gt;<br>        &lt;!-- page header --&gt;<br>          &lt;div style=&quot;margin:auto;max-width:960px;&quot;&gt;<br>            &lt;!-- page header - left company name --&gt;<br>              &lt;div class=&quot;co_name&quot;&gt;<br>                &lt;a href=&quot;index.html&quot;&gt;HELLO COMPANY&lt;/a&gt;<br>              &lt;/div&gt; &lt;!-- /page header - left company name --&gt;<br>          &lt;/div&gt; &lt;!-- /page header --&gt;<br>      &lt;/div&gt; &lt;!-- /page container div --&gt;<br>  &lt;/body&gt;<br>&lt;/html&gt;
+    </pre>
+    Leo Source Outline (hello2.leo):
+    <div class="clearbth">&nbsp;</div>
+    <div class="fleft"><img class="thinborder" src="img/leo3.png"></div>
+    <div class="clearboth">&nbsp;</div>
+    <div class="fleft"><img class="thinborder" src="img/leo4.png"></div>
+    <div class="clearboth">&nbsp;</div>
+    <div class="fleft"><img class="thinborder" src="img/leo5.png"></div>
+    <div class="clearboth">&nbsp;</div>
+    <div class="fleft"><img class="thinborder" src="img/leo6.png"></div>
+    <div class="clearboth">&nbsp;</div>
+    <div class="fleft"><img class="thinborder" src="img/leo7.png"></div>
+    <div class="clearboth">&nbsp;</div>
+    <div class="fleft"><img class="thinborder" src="img/leo8.png"></div>
+    <div class="clearboth">&nbsp;</div>
+    <p>&nbsp;</p>
+    <h2 class="left">Syntax Details (see syntax.leo for examples)</h2>
+    <h3 class="left">
+    <p>Special Headlines</p>
+    <p>&nbsp;</p>
+    <ul>
+      <li>html
+        <ul>
+          <li>The start of an html document. All the good stuff goes here as the children of the html node.</li>
+        </ul>
+      </li>
+      <li>Doctype (case insensitive)
+        <ul>
+          <li>This headline contains the doctype line. The content of the body text is copied verbatim to the first visible printed line of the html file.</li>
+        </ul>
+      </li>
+      <li>content
+        <ul>
+          <li>This is where the actual data of the file is inserted. Can be used almost anywhere. The data is not formated at all.</li>
+        </ul>
+      </li>
+      <li>+content
+        <ul>
+          <li>Data is inserted line by line, and the current indent is inserted before each line.</li>
+        </ul>
+      </li>
+      <li>!(anything)
+        <ul>
+          <li>The contents of this headline are added as an HTML comment in the HTML file. A closing comment is added when this node goes out of scope.</li>
+        </ul>
+      </li>
+      <li>-(anything)
+        <ul>
+          <li>A comment in the LEO file, for clarity to the LEO coder. All the data in the headline and body text (if any) is ignored by the HTML generator.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

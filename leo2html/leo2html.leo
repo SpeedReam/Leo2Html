@@ -15,11 +15,16 @@
 </v>
 <v t="DSR.20121008174459.1279"><vh>top</vh></v>
 <v t="DSR.20121008174459.1283"><vh>support files</vh>
-<v t="DSR.20121008174459.1285" a="E"><vh>python files</vh>
-<v t="DSR.20121008174459.1287" a="E"><vh>@shadow make_hello1.py</vh></v>
+<v t="DSR.20121008174459.1285"><vh>python files</vh>
+<v t="DSR.20121008174459.1287"><vh>@shadow make_hello1.py</vh></v>
+<v t="DSR.20121009151355.1196"><vh>@shadow make_hello2.py</vh></v>
+<v t="DSR.20121009151355.1213"><vh>@shadow make_syntax.py</vh></v>
 </v>
 <v t="DSR.20121008174459.1284"><vh>batch files</vh>
 <v t="DSR.20121008174459.1282"><vh>@asis make_hello1.bat</vh></v>
+<v t="DSR.20121009151355.1204"><vh>@asis make_hello2.bat</vh></v>
+<v t="DSR.20121009151355.1221"><vh>@asis make_syntax.bat</vh></v>
+<v t="DSR.20121009151355.1205"><vh>@asis doit.bat</vh></v>
 </v>
 </v>
 <v t="DSR.20121008174459.1253" a="E"
@@ -72,5 +77,42 @@ Copyright David Speed Ream 2012, all rights reserved.
 <t tx="DSR.20121008174459.1285">@language python
 </t>
 <t tx="DSR.20121009151355.1188"></t>
+<t tx="DSR.20121009151355.1204">@rem
+@rem Execute this batch file to run the python script make_hello1.py.
+@rem make_hello1.py turns .\leo_source\hello2.leo into .\html\hello2.html
+@rem
+@rem NOTE!!
+@rem Change __python__ to point to your python installation
+@rem
+@rem
+@set __python__=C:\Python273Build2010\Python-2.7.3\PCbuild\python.exe
+@rem
+@rem
+                   "%__python__%" make_hello2.py
+@rem
+@rem
+@set __python__=
+</t>
+<t tx="DSR.20121009151355.1205">@cls
+@rem @call make_hello1
+@rem @call make_hello2
+@call make_syntax
+</t>
+<t tx="DSR.20121009151355.1221">@rem
+@rem Execute this batch file to run the python script make_hello1.py.
+@rem make_hello1.py turns .\leo_source\syntax.leo into .\html\syntax.html
+@rem
+@rem NOTE!!
+@rem Change __python__ to point to your python installation
+@rem
+@rem
+@set __python__=C:\Python273Build2010\Python-2.7.3\PCbuild\python.exe
+@rem
+@rem
+                   "%__python__%" make_syntax.py
+@rem
+@rem
+@set __python__=
+</t>
 </tnodes>
 </leo_file>

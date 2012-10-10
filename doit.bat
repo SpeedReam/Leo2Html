@@ -5,7 +5,7 @@ call git status
 pause
 call git add . --dry-run
 pause
-call git commit -m "Cleaned-up indentation mess."
+call git commit -m "Added documentation directory. Small bug-fixes. Got +indent to work after INDENT rework."
 goto DONE
 :LOG
 git log --reverse
