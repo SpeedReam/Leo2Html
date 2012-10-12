@@ -20,7 +20,7 @@ if __name__ == "__main__":
     from sys import path
     CWD = getcwd()
     path.append(join(CWD, 'py_src'))
-    from leo2html import ReadLeo
+    from leo2html import Leo2Html
     #@-node:DSR.20121009151355.1215:imports
     #@+node:DSR.20121009151355.1216:start
     if DEBUG:print("\n\nStarting make_syntax.py\n\n")
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     #@-node:DSR.20121009151355.1217:setup
     #@+node:DSR.20121009151355.1218:run
     print "1"
-    X = ReadLeo(INDENT, out=o)
+    X = Leo2Html(INDENT, out=o)
     print "2"
     if X:
         filename = join(CWD, 'leo_source', "syntax.leo")

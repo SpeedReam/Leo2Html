@@ -5,7 +5,7 @@ call git status
 pause
 call git add . --dry-run
 pause
-call git commit -m "Fixed minor documentation stuff."
+call git commit -m "Minor changes."
 goto DONE
 :LOG
 git log --reverse

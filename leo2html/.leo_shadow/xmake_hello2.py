@@ -20,7 +20,7 @@ if __name__ == "__main__":
     from sys import path
     CWD = getcwd()
     path.append(join(CWD, 'py_src'))
-    from leo2html import ReadLeo
+    from leo2html import Leo2Html
     #@-node:DSR.20121009151355.1198:imports
     #@+node:DSR.20121009151355.1199:start
     if DEBUG:print("\n\nStarting make_hello2.py\n\n")
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     #@-node:DSR.20121009151355.1200:setup
     #@+node:DSR.20121009151355.1201:run
     print "1"
-    X = ReadLeo(INDENT, out=o)
+    X = Leo2Html(INDENT, out=o)
     print "2"
     if X:
         filename = join(CWD, 'leo_source', "hello2.leo")
