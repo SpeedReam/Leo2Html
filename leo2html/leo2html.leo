@@ -10,14 +10,13 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ekr.20121010144558.10918"><vh>Notes to Speed</vh></v>
-<v t="ekr.20121010144558.10944"><vh>@html-file c:\Users\edreamleo\Leo2Html.html</vh>
+<v t="ekr.20121010144558.10944"><vh>@html-file Leo2Html.html</vh>
 <v t="ekr.20121010144558.10945"><vh>doctype</vh></v>
 <v t="ekr.20121010144558.10946"><vh>html</vh>
-<v t="ekr.20121010144558.10947"><vh>head</vh>
+<v t="ekr.20121010144558.10947" a="E"><vh>head</vh>
 <v t="ekr.20121010144558.10948"><vh>+content</vh></v>
 </v>
-<v t="ekr.20121010144558.10949"><vh>body</vh>
+<v t="ekr.20121010144558.10949" a="E"><vh>body</vh>
 <v t="ekr.20121010144558.10950"><vh>div top nav</vh>
 <v t="ekr.20121010144558.10951"><vh>+content</vh></v>
 </v>
@@ -53,10 +52,10 @@
 </v>
 <v t="ekr.20121010144558.11023"><vh>@command Leo2Html</vh>
 <v t="ekr.20121010144558.11024"><vh>find_root</vh></v>
-<v t="ekr.20121010144558.11025"><vh>class Leo2Html</vh>
+<v t="ekr.20121010144558.11025" a="E"><vh>class Leo2Html</vh>
 <v t="ekr.20121010144558.11026"><vh>__init__</vh></v>
 <v t="ekr.20121010144558.11027"><vh>indent</vh></v>
-<v t="ekr.20121010144558.11028"><vh>process(top-level) &amp; helpers</vh>
+<v t="ekr.20121010144558.11028" a="E"><vh>process(top-level) &amp; helpers</vh>
 <v t="ekr.20121010144558.11029"><vh>do_node &amp; helpers</vh>
 <v t="ekr.20121010144558.11030"><vh>do_tag</vh></v>
 <v t="ekr.20121010144558.11031"><vh>handle_special</vh></v>
@@ -65,7 +64,7 @@
 <v t="ekr.20121010144558.11033"><vh>doctype</vh></v>
 <v t="ekr.20121010144558.11034"><vh>write_file</vh></v>
 </v>
-<v t="ekr.20121010144558.11035"><vh>class htag</vh>
+<v t="ekr.20121010144558.11035" a="E"><vh>class htag</vh>
 <v t="ekr.20121010144558.11036"><vh>__init__</vh></v>
 <v t="ekr.20121010144558.11037"><vh>indent</vh></v>
 <v t="ekr.20121010144558.11038"><vh>set_tags</vh></v>
@@ -76,38 +75,6 @@
 </v>
 </vnodes>
 <tnodes>
-<t tx="ekr.20121010144558.10918">@nocolor-node
-
-Yo!  This has been a ton of fun.  Many thanks for sharing your ideas.
-
-The @html-file is a version of Leo's home page.  It looks like the real
-thing if you add the .css files in the _static subdirectory.
-
-Changes from last time:
-    
-- Removed copyright.
-
-- Added two identical self.indent() methods, one of which replaces the
-  self.indent ivar in htag class. These methods generate either soft tabs
-  (c.tab_width &lt; 0) or hard tabs (c.tab_width &gt; 0). It would be possible to
-  use a single indent method, but it's not that big a deal.
-  
-- Set new .newline_tag ivar in set_tags. Use this to avoid a search loop in
-  write_close. BTW, set_tags now breaks when it finds the first match.
-  
-- Further revised write_close: it no longer sets self.close. After going
-  through all the trouble in set_tags to compute self.close, write_close
-  used to override self.close when it found a special tag. Now, self.close
-  is *never* reset after being computed in set_tags. I *think* this is
-  correct: the test file still works. Speed, what do you think?
-  
-There is still something strange in htag.write_close: See the ??? mark. Why
-is the closing tag overridden when newline_tag is True? This is not
-something I added, it was present in your original code.
-
-Edward
-
-  </t>
 <t tx="ekr.20121010144558.10944">@language html
 @tabwidth -2
 </t>

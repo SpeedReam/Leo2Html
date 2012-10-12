@@ -10,7 +10,7 @@ call git status
 @pause
 call git add . --dry-run
 @pause
-call git commit -m "Edwards first major rewrite to put all activity in one leo file plus make the whole project more Leo-onic."
+call git commit -m "Remove 'Notes to Speed'. Make leo2html.leo file path point to .\leo2html.leo."
 goto DONE
 :LOG
 call git log --reverse
