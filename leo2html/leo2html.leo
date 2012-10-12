@@ -11,7 +11,7 @@
 <find_panel_settings/>
 <vnodes>
 <v t="ekr.20121012121028.15525"><vh>Notes</vh></v>
-<v t="ekr.20121012121028.15572"><vh>@html-file c:\Users\edreamleo\Leo2Html.html</vh>
+<v t="ekr.20121012121028.15572" a="E"><vh>@html-file c:\Users\edreamleo\Leo2Html.html</vh>
 <v t="ekr.20121012121028.15573"><vh>doctype</vh></v>
 <v t="ekr.20121012121028.15574"><vh>html</vh>
 <v t="ekr.20121012121028.15575"><vh>head</vh>
