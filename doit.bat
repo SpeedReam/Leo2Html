@@ -10,7 +10,7 @@ call git status
 @pause
 call git add . --dry-run
 @pause
-call git commit -m "Remove 'Notes to Speed'. Make leo2html.leo file path point to .\leo2html.leo."
+call git commit -m "Edward's 2nd rewrite, the continuation of the simplification process. Edward says this may be as simple as it gets."
 goto DONE
 :LOG
 call git log --reverse

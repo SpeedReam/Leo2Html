@@ -10,79 +10,85 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="ekr.20121010144558.10944"><vh>@html-file Leo2Html.html</vh>
-<v t="ekr.20121010144558.10945"><vh>doctype</vh></v>
-<v t="ekr.20121010144558.10946"><vh>html</vh>
-<v t="ekr.20121010144558.10947" a="E"><vh>head</vh>
-<v t="ekr.20121010144558.10948"><vh>+content</vh></v>
+<v t="ekr.20121012121028.15525"><vh>Notes</vh></v>
+<v t="ekr.20121012121028.15572"><vh>@html-file c:\Users\edreamleo\Leo2Html.html</vh>
+<v t="ekr.20121012121028.15573"><vh>doctype</vh></v>
+<v t="ekr.20121012121028.15574"><vh>html</vh>
+<v t="ekr.20121012121028.15575"><vh>head</vh>
+<v t="ekr.20121012121028.15576"><vh>+content</vh></v>
 </v>
-<v t="ekr.20121010144558.10949" a="E"><vh>body</vh>
-<v t="ekr.20121010144558.10950"><vh>div top nav</vh>
-<v t="ekr.20121010144558.10951"><vh>+content</vh></v>
+<v t="ekr.20121012121028.15577"><vh>body</vh>
+<v t="ekr.20121012121028.15578"><vh>! This is a comment</vh>
+<v t="ekr.20121012121028.15579"><vh>xxx</vh></v>
 </v>
-<v t="ekr.20121010144558.10952"><vh>div document</vh>
-<v t="ekr.20121010144558.10953"><vh>div documentwrapper</vh>
-<v t="ekr.20121010144558.10954"><vh>div</vh>
-<v t="ekr.20121010144558.10955"><vh>div</vh>
-<v t="ekr.20121010144558.10956"><vh>div</vh>
-<v t="ekr.20121010144558.10957"><vh>+content</vh></v>
-<v t="ekr.20121010144558.10958"><vh>img</vh></v>
+<v t="ekr.20121012121028.15580"><vh>div top nav</vh>
+<v t="ekr.20121012121028.15581"><vh>+content</vh></v>
 </v>
-</v>
-</v>
-</v>
-<v t="ekr.20121010144558.10959"><vh>div</vh>
-<v t="ekr.20121010144558.10960"><vh>div</vh>
-<v t="ekr.20121010144558.10961"><vh>+content</vh></v>
-<v t="ekr.20121010144558.10962"><vh>p</vh>
-<v t="ekr.20121010144558.10963"><vh>+content</vh></v>
-</v>
-</v>
-</v>
-<v t="ekr.20121010144558.10964"><vh>div</vh></v>
-</v>
-<v t="ekr.20121010144558.10965"><vh>div bottom nav</vh>
-<v t="ekr.20121010144558.10966"><vh>+content</vh></v>
-</v>
-<v t="ekr.20121010144558.10967"><vh>div footer</vh>
-<v t="ekr.20121010144558.10968"><vh>+content</vh></v>
+<v t="ekr.20121012121028.15582"><vh>div document</vh>
+<v t="ekr.20121012121028.15583"><vh>div documentwrapper</vh>
+<v t="ekr.20121012121028.15584"><vh>div</vh>
+<v t="ekr.20121012121028.15585"><vh>div</vh>
+<v t="ekr.20121012121028.15586"><vh>div</vh>
+<v t="ekr.20121012121028.15587"><vh>+content</vh></v>
+<v t="ekr.20121012121028.15588"><vh>img</vh></v>
 </v>
 </v>
 </v>
 </v>
-<v t="ekr.20121010144558.11023"><vh>@command Leo2Html</vh>
-<v t="ekr.20121010144558.11024"><vh>find_root</vh></v>
-<v t="ekr.20121010144558.11025" a="E"><vh>class Leo2Html</vh>
-<v t="ekr.20121010144558.11026"><vh>__init__</vh></v>
-<v t="ekr.20121010144558.11027"><vh>indent</vh></v>
-<v t="ekr.20121010144558.11028" a="E"><vh>process(top-level) &amp; helpers</vh>
-<v t="ekr.20121010144558.11029"><vh>do_node &amp; helpers</vh>
-<v t="ekr.20121010144558.11030"><vh>do_tag</vh></v>
-<v t="ekr.20121010144558.11031"><vh>handle_special</vh></v>
-<v t="ekr.20121010144558.11032"><vh>write</vh></v>
+<v t="ekr.20121012121028.15589"><vh>div</vh>
+<v t="ekr.20121012121028.15590"><vh>div</vh>
+<v t="ekr.20121012121028.15591"><vh>+content</vh></v>
+<v t="ekr.20121012121028.15592"><vh>p</vh>
+<v t="ekr.20121012121028.15593"><vh>+content</vh></v>
 </v>
-<v t="ekr.20121010144558.11033"><vh>doctype</vh></v>
-<v t="ekr.20121010144558.11034"><vh>write_file</vh></v>
 </v>
-<v t="ekr.20121010144558.11035" a="E"><vh>class htag</vh>
-<v t="ekr.20121010144558.11036"><vh>__init__</vh></v>
-<v t="ekr.20121010144558.11037"><vh>indent</vh></v>
-<v t="ekr.20121010144558.11038"><vh>set_tags</vh></v>
-<v t="ekr.20121010144558.11039"><vh>write_close</vh></v>
-<v t="ekr.20121010144558.11040"><vh>write_open</vh></v>
+</v>
+<v t="ekr.20121012121028.15594"><vh>div</vh></v>
+</v>
+<v t="ekr.20121012121028.15595"><vh>div bottom nav</vh>
+<v t="ekr.20121012121028.15596"><vh>+content</vh></v>
+</v>
+<v t="ekr.20121012121028.15597"><vh>div footer</vh>
+<v t="ekr.20121012121028.15598"><vh>+content</vh></v>
+</v>
+</v>
+</v>
+</v>
+<v t="ekr.20121012121028.15599"><vh>@command Leo2Html</vh>
+<v t="ekr.20121012121028.15600"><vh>find_root</vh></v>
+<v t="ekr.20121012121028.15601"><vh>class Leo2Html</vh>
+<v t="ekr.20121012121028.15602"><vh>__init__</vh></v>
+<v t="ekr.20121012121028.15603"><vh>indent</vh></v>
+<v t="ekr.20121012121028.15604"><vh>process(top-level) &amp; helpers</vh>
+<v t="ekr.20121012121028.15605"><vh>do_node &amp; helpers</vh>
+<v t="ekr.20121012121028.15606"><vh>do_tag</vh></v>
+<v t="ekr.20121012121028.15607"><vh>handle_special</vh></v>
+<v t="ekr.20121012121028.15608"><vh>write</vh></v>
+</v>
+<v t="ekr.20121012121028.15609"><vh>doctype</vh></v>
+<v t="ekr.20121012121028.15610"><vh>write_file</vh></v>
+</v>
+<v t="ekr.20121012121028.15611"><vh>class htag</vh>
+<v t="ekr.20121012121028.15612"><vh>__init__</vh></v>
+<v t="ekr.20121012121028.15613"><vh>set_tags</vh></v>
+<v t="ekr.20121012121028.15614"><vh>write_close</vh></v>
+<v t="ekr.20121012121028.15615"><vh>write_open</vh></v>
 </v>
 </v>
 </v>
 </vnodes>
 <tnodes>
-<t tx="ekr.20121010144558.10944">@language html
+<t tx="ekr.20121012121028.15525">@nocolor-node
+
+This is about as simple as I can make it :-)</t>
+<t tx="ekr.20121012121028.15572">@language html
 @tabwidth -2
 </t>
-<t tx="ekr.20121010144558.10945">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<t tx="ekr.20121012121028.15573">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</t>
-<t tx="ekr.20121010144558.10946">xmlns="http://www.w3.org/1999/xhtml"</t>
-<t tx="ekr.20121010144558.10947"></t>
-<t tx="ekr.20121010144558.10948">&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+<t tx="ekr.20121012121028.15574">xmlns="http://www.w3.org/1999/xhtml"</t>
+<t tx="ekr.20121012121028.15575"></t>
+<t tx="ekr.20121012121028.15576">&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
 &lt;title&gt;Leo's Home Page&lt;/title&gt;
 &lt;link rel="stylesheet" href="_static/default.css" type="text/css" /&gt;
 &lt;link rel="stylesheet" href="_static/pygments.css" type="text/css" /&gt;
@@ -141,9 +147,11 @@
 &lt;link rel="Users Guide" title="Leo&amp;#8217;s Users Guide" href="leo_toc.html" /&gt;
 &lt;!-- &lt;link rel="prev" title="Using Leoâ€™s Commands" href="commands.html" /&gt;--&gt; 
 </t>
-<t tx="ekr.20121010144558.10949"></t>
-<t tx="ekr.20121010144558.10950">class="related"</t>
-<t tx="ekr.20121010144558.10951">&lt;h3&gt;Navigation&lt;/h3&gt;
+<t tx="ekr.20121012121028.15577"></t>
+<t tx="ekr.20121012121028.15578"></t>
+<t tx="ekr.20121012121028.15579"></t>
+<t tx="ekr.20121012121028.15580">class="related"</t>
+<t tx="ekr.20121012121028.15581">&lt;h3&gt;Navigation&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li class="right" style="margin-right: 10px"&gt;
@@ -158,13 +166,13 @@
 &lt;li&gt;&lt;a href="leo_toc.html"&gt;Leo v4.9 documentation&lt;/a&gt; &amp;raquo;&lt;/li&gt;
 &lt;/ul&gt;
 </t>
-<t tx="ekr.20121010144558.10952">class="document"</t>
-<t tx="ekr.20121010144558.10953">class="documentwrapper"
+<t tx="ekr.20121012121028.15582">class="document"</t>
+<t tx="ekr.20121012121028.15583">class="documentwrapper"
 </t>
-<t tx="ekr.20121010144558.10954">class="bodywrapper"</t>
-<t tx="ekr.20121010144558.10955">class="body"</t>
-<t tx="ekr.20121010144558.10956">class="section" id="Leo&amp;#8217;s Home page"</t>
-<t tx="ekr.20121010144558.10957">&lt;h1&gt;Leo&amp;#8217;s Home Page&lt;/h1&gt;
+<t tx="ekr.20121012121028.15584">class="bodywrapper"</t>
+<t tx="ekr.20121012121028.15585">class="body"</t>
+<t tx="ekr.20121012121028.15586">class="section" id="Leo&amp;#8217;s Home page"</t>
+<t tx="ekr.20121012121028.15587">&lt;h1&gt;Leo&amp;#8217;s Home Page&lt;/h1&gt;
 
 Leo is...
 
@@ -210,13 +218,13 @@ Leo is...
 
 &lt;p&gt;Here is a screenshot of Leo's main window.&lt;/p&gt;
 </t>
-<t tx="ekr.20121010144558.10958">class="screenshot"
+<t tx="ekr.20121012121028.15588">class="screenshot"
 src="screen-shots/render-svg-sources.png"
 alt="ScreenShot"
 </t>
-<t tx="ekr.20121010144558.10959">class="sphinxsidebar"</t>
-<t tx="ekr.20121010144558.10960">class="sphinxsidebarwrapper"</t>
-<t tx="ekr.20121010144558.10961">&lt;p class="logo"&gt;&lt;a href="leo_toc.html"&gt;
+<t tx="ekr.20121012121028.15589">class="sphinxsidebar"</t>
+<t tx="ekr.20121012121028.15590">class="sphinxsidebarwrapper"</t>
+<t tx="ekr.20121012121028.15591">&lt;p class="logo"&gt;&lt;a href="leo_toc.html"&gt;
   &lt;img class="logo" src="_static/Leo4-80-border.jpg" alt="Logo"/&gt;&lt;/a&gt;
 &lt;/p&gt;
 
@@ -259,8 +267,8 @@ alt="ScreenShot"
   &lt;/p&gt;
 &lt;/div&gt;
 </t>
-<t tx="ekr.20121010144558.10962"></t>
-<t tx="ekr.20121010144558.10963">Written by &lt;a HREF="ekr.html"&gt;Edward K. Ream&lt;/a&gt;
+<t tx="ekr.20121012121028.15592"></t>
+<t tx="ekr.20121012121028.15593">Written by &lt;a HREF="ekr.html"&gt;Edward K. Ream&lt;/a&gt;
 
 &lt;!-- flattr icon --&gt;
 &lt;a class="FlattrButton"
@@ -275,9 +283,9 @@ alt="ScreenShot"
     &lt;/a&gt;
 &lt;/noscript&gt;
 </t>
-<t tx="ekr.20121010144558.10964">class="clearer"</t>
-<t tx="ekr.20121010144558.10965">class="related"</t>
-<t tx="ekr.20121010144558.10966">&lt;h3&gt;Navigation&lt;/h3&gt;
+<t tx="ekr.20121012121028.15594">class="clearer"</t>
+<t tx="ekr.20121012121028.15595">class="related"</t>
+<t tx="ekr.20121012121028.15596">&lt;h3&gt;Navigation&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li class="right" style="margin-right: 10px"&gt;
@@ -292,14 +300,14 @@ alt="ScreenShot"
 &lt;li&gt;
     &lt;a href="leo_toc.html"&gt;Leo v4.9 documentation&lt;/a&gt; &amp;raquo;&lt;/li&gt; 
 &lt;/ul&gt;</t>
-<t tx="ekr.20121010144558.10967">class="footer"</t>
-<t tx="ekr.20121010144558.10968">&amp;copy; Copyright 2001-2012, Edward K. Ream.
+<t tx="ekr.20121012121028.15597">class="footer"</t>
+<t tx="ekr.20121012121028.15598">&amp;copy; Copyright 2001-2012, Edward K. Ream.
 Last updated on March 22, 2012.
 Created using &lt;a href="http://sphinx.pocoo.org/"&gt;Sphinx&lt;/a&gt; 1.1.
 </t>
-<t tx="ekr.20121010144558.11023">'''Convert the first @html-file node into an HTML file.
+<t tx="ekr.20121012121028.15599">'''Convert the first @html-file node into an HTML file.
 
-October 11, 2012, by EKR.
+October 12, 2012, by EKR.
 
 Based on code by David Speed Ream.  Used by permission.
 '''
@@ -309,9 +317,9 @@ Based on code by David Speed Ream.  Used by permission.
 @others
 
 fn,p = find_root(c)
-Leo2Html(c,indent_size=1).process(fn,p)
+Leo2Html(c,indent_size=c.tab_width).process(fn,p)
 </t>
-<t tx="ekr.20121010144558.11024">def find_root(c):
+<t tx="ekr.20121012121028.15600">def find_root(c):
     
     '''Find the **top-level** node starting with "html" '''
 
@@ -325,10 +333,10 @@ Leo2Html(c,indent_size=1).process(fn,p)
         g.error('no top-level html tree found')
         return None
 </t>
-<t tx="ekr.20121010144558.11025">class Leo2Html:
+<t tx="ekr.20121012121028.15601">class Leo2Html:
     @others
 </t>
-<t tx="ekr.20121010144558.11026">def __init__(self,c,indent_size=None):
+<t tx="ekr.20121012121028.15602">def __init__(self,c,indent_size=None):
 
     # Set instance variables to default values
     self.c = c
@@ -337,9 +345,8 @@ Leo2Html(c,indent_size=1).process(fn,p)
     self.fn = None # The full file name.
     self.root = None # the html node.
     self.tfile = None # temporary output file object
-
 </t>
-<t tx="ekr.20121010144558.11027">def indent (self,n):
+<t tx="ekr.20121012121028.15603">def indent (self,n):
     
     '''
     Return the leading whitespace corresponding to n tab stops.
@@ -349,8 +356,9 @@ Leo2Html(c,indent_size=1).process(fn,p)
     if self.indent_size &lt; 0:
         return n * abs(self.indent_size) * ' '
     else:
-        return n * '\t'</t>
-<t tx="ekr.20121010144558.11028">def process(self,fn,p):
+        return n * '\t'
+</t>
+<t tx="ekr.20121012121028.15604">def process(self,fn,p):
     '''
     fn is the full path of the file to be output (the html page).
     p is the @html-file node.
@@ -374,11 +382,11 @@ Leo2Html(c,indent_size=1).process(fn,p)
     except Exception:
         g.es_exception()
 </t>
-<t tx="ekr.20121010144558.11029">def do_node (self,p):
+<t tx="ekr.20121012121028.15605">def do_node (self,p):
 
     self.handle_special(p) or self.do_tag(p)
 </t>
-<t tx="ekr.20121010144558.11030">def do_tag(self,p):
+<t tx="ekr.20121012121028.15606">def do_tag(self,p):
     
     '''
     p.h is an html tag. This tag is either a special tag like &lt;br&gt; which
@@ -387,7 +395,7 @@ Leo2Html(c,indent_size=1).process(fn,p)
     another html tree consisting of additional tags, content, etc.
     '''
 
-    tag = self.htag(p,self.indent_pos,self.indent_size,self.tfile)
+    tag = self.htag(self,p,self.indent_pos,self.indent_size,self.tfile)
     tag.write_open()
     self.indent_pos += 1
     for child in p.children():
@@ -395,7 +403,7 @@ Leo2Html(c,indent_size=1).process(fn,p)
     self.indent_pos -=1
     tag.write_close()
 </t>
-<t tx="ekr.20121010144558.11031">def handle_special(self, p):
+<t tx="ekr.20121012121028.15607">def handle_special(self, p):
     '''
     Handles special nodes of a Leo html source file. The special nodes are:
     1. content
@@ -428,7 +436,7 @@ Leo2Html(c,indent_size=1).process(fn,p)
     else:
         return False
 </t>
-<t tx="ekr.20121010144558.11032">def write (self,data,NL=True):
+<t tx="ekr.20121012121028.15608">def write (self,data,NL=True):
     '''
     Write data to the current temporary file.
     If NL, add a carriage return plus indent at the beginning of the line.
@@ -440,7 +448,7 @@ Leo2Html(c,indent_size=1).process(fn,p)
 
     self.tfile.write(g.toEncodedString(data))
 </t>
-<t tx="ekr.20121010144558.11033">def doctype(self,p):
+<t tx="ekr.20121012121028.15609">def doctype(self,p):
 
     '''Process the first 'doctype' line of the html tree.'''
 
@@ -449,7 +457,7 @@ Leo2Html(c,indent_size=1).process(fn,p)
             self.write(p.b,NL=False)
             break
 </t>
-<t tx="ekr.20121010144558.11034">def write_file(self):
+<t tx="ekr.20121012121028.15610">def write_file(self):
     
     assert self.tfile
     self.tfile.seek(0)
@@ -461,118 +469,87 @@ Leo2Html(c,indent_size=1).process(fn,p)
     outf = open(self.fn,'wb')
     outf.write(data)
     outf.close()</t>
-<t tx="ekr.20121010144558.11035">class htag:
+<t tx="ekr.20121012121028.15611">class htag:
     
     # non typical html tags 
-    tags = [
-        ("br",     "empty"),
-        ("hr",     "empty"),
-        ("img",    "single"),
-        ("meta",   "single"),
-        ("link",   "single"),
-        ("html",   "newline"),
-        ("head",   "newline"),
-        ("style",  "newline"),
-        ("script", "newline"),
-        ("body",   "newline"),
-        ("div",    "newline"),
-        ("ul",     "newline"),
-    ]
+    tags = {
+        "br":     "empty",
+        "hr":     "empty",
+        "img":    "single",
+        "meta":   "single",
+        "link":   "single",
+        "html":   "newline",
+        "head":   "newline",
+        "style":  "newline",
+        "script": "newline",
+        "body":   "newline",
+        "div":    "newline",
+        "ul":     "newline",
+    }
 
     @others
 </t>
-<t tx="ekr.20121010144558.11036">def __init__(self,p,indent_pos,indent_size,ofile,comments=True):
+<t tx="ekr.20121012121028.15612">def __init__(self,parent,p,indent_pos,indent_size,ofile):
     
     # Capture args...
     self.h = p.h # text of the entire headline
     self.h_tag = p.h.split(" ")[0] # first word of headline
+    self.parent = parent
     self.p = p
     self.indent_pos = indent_pos
-    self.indent_size = indent_size # usually c.tab_width.
+    self.indent_size = indent_size # overrides c.tab_width.
     self.ofile = ofile # open output file object
-    self.comments = comments # True if we should show comments
     
     # Init ivars...
-    self.single = False
-    self.empty = False
-    self.close = None
-    self.newline_tag = False
-    self.tag = None
+    self.close_tag = None
+    self.open_tag = None
     self.attribs = [z for z in self.p.b.split('\n') if z.strip()]
     
     # Compute opening and closing tags.
     self.set_tags()
 </t>
-<t tx="ekr.20121010144558.11037">def indent (self,n):
+<t tx="ekr.20121012121028.15613">def set_tags(self):
     
-    '''
-    Return the leading whitespace corresponding to n tab stops.
-    Use blanks if self.indent_size &lt; 0, otherwise use hard tabs.
-    '''
-    
-    if self.indent_size &lt; 0:
-        return n * abs(self.indent_size) * ' '
+    '''Define self.open_tag and self.close_tag for all kinds of tags.'''
+
+    h,htag = self.h,self.h_tag
+    if h.startswith("!"): # A comment.
+        s = h[1:].strip()
+        self.open_tag = "&lt;!-- %s --&gt;" % s
+        self.close_tag = "\n%s&lt;!-- /%s --&gt;" % (
+            self.parent.indent(self.indent_pos),s)
     else:
-        return n * '\t'</t>
-<t tx="ekr.20121010144558.11038">def set_tags(self):
-
-    # handle comments
-    if self.h.startswith("!"):
-        itext = self.h[1:]
-        self.tag = "&lt;!-- %s --&gt;" % itext
-        self.close = "&lt;!-- /%s --&gt;" % itext
-        return
-
-    # handle any special case tags
-    for atag, ttype in self.tags:
-        if atag == self.h_tag:
-            if ttype == "empty":
-                self.tag = "&lt;%s /&gt;" % self.h
-                self.empty = True
-            elif ttype == "single":
-                self.tag = "&lt;%s /&gt;" % self.h
-                self.single = True
-            elif ttype == "newline":
-                self.newline_tag = True
-                self.close = "&lt;/%s&gt;" % self.h
-            else:
-                self.close = "&lt;/%s&gt;" % self.h
-            break # No need to go further.
-
-    # if we haven't already generated a tag, do so
-    if not self.tag:
-        if self.single:
-            self.tag = "&lt;%s /&gt;" % self.h
+        ttype = self.tags.get(self.h_tag)
+        if ttype == "empty":
+            self.open_tag = "&lt;%s /&gt;" % htag
+            self.close_tag = ''
+        elif ttype == "single":
+            self.open_tag = "&lt;%s /&gt;" % htag
+            self.close_tag = ''
+        elif ttype == "newline":
+            self.open_tag = "&lt;%s&gt;" % htag
+            self.close_tag = "\n%s&lt;/%s&gt;" % (
+                self.parent.indent(self.indent_pos),htag)
         else:
-            self.tag = "&lt;%s&gt;" % self.h
-            self.close = "&lt;/%s&gt;" % self.h</t>
-<t tx="ekr.20121010144558.11039">def write_close(self):
-
-    if self.single or self.empty:
-        # The closing tag has already been generated.
-        pass  
-    elif self.close.startswith("&lt;!"):
-        # handle comments
-        self.ofile.write(" " + self.close)
-    elif self.newline_tag:
-        indent = self.indent(self.indent_pos)
-        close = "&lt;/%s&gt;" % self.h_tag # ??? Override self.close?
-        self.ofile.write('\n%s%s' % (indent,close))
-    else:
-        # Handle regular tags.
-        self.ofile.write(self.close)
+            self.open_tag = "&lt;%s&gt;" % htag
+            self.close_tag = "&lt;/%s&gt;" % htag
 </t>
-<t tx="ekr.20121010144558.11040">def write_open(self):
+<t tx="ekr.20121012121028.15614">def write_close(self):
+    
+    if self.close_tag:
+        self.ofile.write(self.close_tag)
+</t>
+<t tx="ekr.20121012121028.15615">def write_open(self):
     
     if self.attribs:
-        indent = self.indent(self.indent_pos+1)
+        indent = self.parent.indent(self.indent_pos+1)
         lws = '\n%s' % indent
         attrs = lws.join([z.strip("\r\n\t ") for z in self.attribs])
-        end =  '/&gt;' if self.single or self.empty else '&gt;'
+        end = '/&gt;' if self.open_tag.endswith('/&gt;') else '&gt;'
         s = '\n%s&lt;%s %s%s' % (indent,self.h_tag,attrs,end) 
     else:
-        indent = self.indent(self.indent_pos)
-        s = '\n%s%s' % (indent,self.tag)
+        indent = self.parent.indent(self.indent_pos)
+        s = '\n%s%s' % (indent,self.open_tag)
 
     self.ofile.write(s)
 </t>
