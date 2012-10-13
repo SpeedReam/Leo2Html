@@ -10,7 +10,7 @@ call git status
 @pause
 call git add . --dry-run
 @pause
-call git commit -m "Edward's 2nd rewrite, the continuation of the simplification process. Edward says this may be as simple as it gets."
+call git commit -m "Edward's 3rd rewrite, add unit testing."
 goto DONE
 :LOG
 call git log --reverse
